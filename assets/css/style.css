@@ -1,0 +1,36 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --pink: #f3a4c5;
+  --pink-light: #fff0f6;
+  --blue: #a8c9ed;
+  --blue-light: #edf5ff;
+  --ink: #26334a;
+  --muted: #657188;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fffafd; color: var(--ink); font-family: 'DM Sans', sans-serif; }
+.topbar { max-width: 1050px; margin: auto; padding: 28px 24px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 11px; letter-spacing: 2px; }
+.topbar a { font: 700 25px 'Space Grotesk', sans-serif; color: var(--ink); text-decoration: none; letter-spacing: -2px; }
+.topbar a span { color: #e77eaa; }
+main { max-width: 1050px; margin: auto; padding: 55px 24px 30px; }
+.hero { padding: 45px 0 65px; max-width: 760px; }
+.eyebrow { color: #d36d99; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+h1 { font: 700 clamp(42px, 8vw, 76px)/1.05 'Space Grotesk', sans-serif; letter-spacing: -4px; margin: 22px 0; }
+h1 span { color: #df80aa; }
+.hero h2 { font: 600 21px 'Space Grotesk', sans-serif; }
+.intro { color: var(--muted); font-size: 17px; line-height: 1.8; max-width: 620px; }
+.contact-button { display: inline-block; margin-top: 18px; padding: 13px 23px; border-radius: 30px; background: var(--ink); color: white; text-decoration: none; font-weight: 600; }
+.content-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.panel { padding: 28px; border-radius: 18px; min-height: 175px; }
+.panel h2 { font: 700 21px 'Space Grotesk', sans-serif; margin-top: 0; }
+.panel p { color: #536078; line-height: 1.7; }
+.pink { background: var(--pink-light); }
+.blue { background: var(--blue-light); }
+footer { padding: 55px 0 20px; color: #8992a3; font-size: 12px; text-align: center; }
+@media (max-width: 600px) {
+  main { padding-top: 25px; }
+  .content-grid { grid-template-columns: 1fr; }
+  h1 { letter-spacing: -2px; }
+  .topbar { padding: 20px; }
+}
