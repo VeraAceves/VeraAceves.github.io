@@ -3,111 +3,248 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Currículum y portfolio profesional de Verónica Aceves Gil">
-  <title>Verónica Aceves Gil</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículum profesional de Verónica Aceves Gil. Estudiante de Desarrollo de Aplicaciones Multiplataforma.">
+  <title>Verónica Aceves Gil | Desarrollo de software</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<div class="cv-container">
+<header class="top-header">
+  <a href="assets/CV-Veronica-Aceves-Gil.pdf"
+     class="cv-download"
+     download="CV-Veronica-Aceves-Gil.pdf">
+    CURRÍCULUM PROFESIONAL
+    <span aria-hidden="true">↓</span>
+  </a>
+</header>
 
+<div class="cv-layout">
+
+  <!-- COLUMNA IZQUIERDA -->
   <aside class="sidebar">
+
     <div class="photo-container">
-      <img src="/assets/perfil.png" alt="Fotografía de Verónica Aceves Gil">
+      <img
+              src="assets/perfil.png"
+              alt="Fotografía de Verónica Aceves Gil"
+              class="profile-photo">
     </div>
 
-    <section class="side-section">
+    <!-- CONTACTO -->
+    <section class="sidebar-section contact-section">
       <h2>Contacto</h2>
-      <div class="section-line"></div>
-      <p>Correo electrónico<br><span>veronicacevesgil@gmail.com</span></p>
-      <p>Teléfono<br><span>675128709</span></p>
-      <p>Localización<br><span>Gondomar, Pontevedra</span></p>
-    </section>
 
-    <section class="side-section">
-      <h2>Soft-skills</h2>
-      <div class="section-line"></div>
-      <ul>
-        <li>Programación</li>
-        <li>Desarrollo de aplicaciones</li>
-        <li>Creatividad</li>
-        <li>Resolución de problemas</li>
-        <li>Bases de datos</li>
-        <li>Comunicación</li>
+      <ul class="contact-list">
+
+        <li>
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11 11 0 0 0 3.4.5 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .5 3.4 1 1 0 0 1-.2 1z"/>
+              </svg>
+            </span>
+          <a href="tel:+34675128709">675 12 87 09</a>
+        </li>
+
+        <li>
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 8L3 7v10h18V7z"/>
+              </svg>
+            </span>
+          <a href="mailto:veronicacevesgil@gmail.com">
+            veronicacevesgil@gmail.com
+          </a>
+        </li>
+
+        <li>
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3.1a15 15 0 0 0-1.2-5 8 8 0 0 1 4.3 5zM12 4c.9 1.3 1.5 3.8 1.7 7h-3.4c.2-3.2.8-5.7 1.7-7zM4.1 13h3.1a15 15 0 0 0 1.2 5 8 8 0 0 1-4.3-5zm3.1-2H4.1a8 8 0 0 1 4.3-5 15 15 0 0 0-1.2 5zm2.9 2h3.8c-.2 3.2-.8 5.7-1.9 7-1.1-1.3-1.7-3.8-1.9-7zm5.7 5a15 15 0 0 0 1.2-5h3.1a8 8 0 0 1-4.3 5z"/>
+              </svg>
+            </span>
+          <a href="https://www.linkedin.com/in/veronicacevesgil/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+
       </ul>
     </section>
 
-    <section class="side-section">
+    <!-- IDIOMAS -->
+    <section class="sidebar-section">
       <h2>Idiomas</h2>
-      <div class="section-line"></div>
-      <p>Español <span>Bilingüe Español-Gallego</span></p>
-      <p>Inglés <span>B2, FCE Cambridge</span></p>
+
+      <ul class="simple-list">
+        <li>
+          <span>Español</span>
+          <span class="language-level">Bilingüe</span>
+        </li>
+        <li>
+          <span>Gallego</span>
+          <span class="language-level">Bilingüe</span>
+        </li>
+        <li>
+          <span>Inglés</span>
+          <span class="language-level">B2 · Cambridge FCE</span>
+        </li>
+      </ul>
     </section>
 
-    <div class="sidebar-decoration"></div>
+    <!-- SOFT SKILLS -->
+    <section class="sidebar-section">
+      <h2>Competencias personales</h2>
+
+      <ul class="soft-skills-list">
+        <li>
+          <span class="skill-dots" aria-hidden="true">● ● ●</span>
+          <span>Facilidad para adaptarme a nuevos aprendizajes</span>
+        </li>
+        <li>
+          <span class="skill-dots" aria-hidden="true">● ● ●</span>
+          <span>Experiencia en resolución de problemas</span>
+        </li>
+        <li>
+          <span class="skill-dots" aria-hidden="true">● ● ●</span>
+          <span>Perseverancia</span>
+        </li>
+        <li>
+          <span class="skill-dots" aria-hidden="true">● ● ●</span>
+          <span>Resistencia a la frustración</span>
+        </li>
+      </ul>
+    </section>
+
   </aside>
 
+
+  <!-- COLUMNA DERECHA -->
   <main class="main-content">
 
-    <header class="profile">
-      <p class="eyebrow">CURRÍCULUM PROFESIONAL</p>
-      <h1>Verónica <span>Aceves Gil</span></h1>
-      <h2>Desarrollo de Aplicaciones Multiplataforma</h2>
-    </header>
+    <!-- PRESENTACIÓN -->
+    <section class="intro-section">
+      <h1>Verónica<br>Aceves Gil</h1>
 
-    <section class="main-section">
-      <div class="section-heading">
-        <span class="number">01</span>
-        <h2>Perfil profesional</h2>
-      </div>
-      <p>
-        Este espacio estará dedicado a mi presentación profesional,
-        mis objetivos y mis intereses dentro del desarrollo de software.
+      <p class="professional-title">
+        Estudiante de Desarrollo de Aplicaciones Multiplataforma
+      </p>
+
+      <p class="profile-text">
+        Estudiante del Ciclo Formativo de Grado Superior en Desarrollo
+        de Aplicaciones Multiplataforma (DAM), con un perfil
+        multidisciplinar que combina creatividad, experiencia en
+        gestión y atención al cliente, y especial interés por el
+        desarrollo de software.
       </p>
     </section>
 
-    <section class="main-section">
-      <div class="section-heading">
-        <span class="number">02</span>
-        <h2>Educación</h2>
+
+    <!-- FORMACIÓN -->
+    <section class="content-section education-section">
+      <h2>Formación</h2>
+
+      <div class="education-group">
+        <h3>Formación académica</h3>
+
+        <article class="cv-entry">
+          <h4>
+            Ciclo Formativo de Grado Superior en Desarrollo de
+            Aplicaciones Multiplataforma (DAM)
+          </h4>
+          <p class="institution">Nortempo Formación · En curso</p>
+        </article>
+
+        <article class="cv-entry">
+          <h4>Grado en Comunicación Audiovisual</h4>
+          <p class="institution">Universidad de Vigo · 2011</p>
+        </article>
       </div>
-      <div class="timeline-item">
-        <span class="date">FORMACIÓN ACTUAL</span>
-        <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
-        <p>Formación académica · DAM</p>
-        <p class="pending">Centro educativo y fechas pendientes de completar.</p>
+
+      <div class="education-group">
+        <h3>Formación complementaria</h3>
+
+        <article class="cv-entry">
+          <h4>Cloud DevOps Engineer</h4>
+          <p class="institution">CNTG · 2026</p>
+        </article>
+
+        <article class="cv-entry">
+          <h4>Curso de AutoCAD 3D</h4>
+          <p class="institution">FEMXA Formación · 2020</p>
+        </article>
+
+        <article class="cv-entry">
+          <h4>Curso de Project Management</h4>
+          <p class="institution">FEMXA Formación · 2020</p>
+        </article>
       </div>
     </section>
 
-    <section class="main-section">
-      <div class="section-heading">
-        <span class="number">03</span>
-        <h2>Experiencia</h2>
-      </div>
-      <div class="timeline-item">
-        <h3>Prácticas profesionales</h3>
-        <p>Próxima incorporación al periodo de formación en empresa.</p>
-      </div>
+
+    <!-- EXPERIENCIA -->
+    <section class="content-section experience-section">
+      <h2>Experiencia profesional</h2>
+
+      <article class="cv-entry">
+        <h3>Responsable de administración</h3>
+        <p class="institution">
+          Brado Pensión Asador · Febrero 2017 – Enero 2018
+        </p>
+        <ul>
+          <li>Gestión administrativa y operativa del restaurante y la pensión.</li>
+          <li>Control de contabilidad, gestión de nóminas y coordinación de un equipo de 8 empleados.</li>
+          <li>Relación con clientes, proveedores y empleados.</li>
+          <li>Gestión de pedidos, recepción de proveedores y atención al cliente.</li>
+          <li>Participación en las tareas de cocina y servicio de sala.</li>
+          <li>Gestión y mantenimiento de los servicios web del negocio.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <h3>Cold Calling Agent</h3>
+        <p class="institution">
+          Grupo Unísono · Mayo 2021 – Junio 2021
+        </p>
+        <ul>
+          <li>Agente de ventas telefónicas a puerta fría para una empresa del sector energético.</li>
+          <li>Trabajo en modalidad remota.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <h3>Venta al público</h3>
+        <p class="institution">
+          Paraísos de Papel · Mayo 2016 – Mayo 2017
+        </p>
+        <ul>
+          <li>Venta al detalle de productos de librería y papelería.</li>
+          <li>Gestión de pedidos y relación con proveedores.</li>
+          <li>Responsable de los servicios web del negocio.</li>
+        </ul>
+      </article>
     </section>
 
-    <section class="main-section">
-      <div class="section-heading">
-        <span class="number">04</span>
-        <h2>Proyectos</h2>
-      </div>
-      <div class="project-card">
-        <h3>Portfolio personal</h3>
-        <p>Diseño y desarrollo de esta web con HTML, CSS, Jekyll y GitHub Pages.</p>
-        <span class="project-tag">PROYECTO EN DESARROLLO</span>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="content-section technology-section">
+      <h2>Tecnologías y lenguajes</h2>
+
+      <div class="technology-cloud" aria-label="Conocimientos técnicos">
+
+        <span class="technology technology-primary">JAVA</span>
+        <span class="technology technology-primary">SQL</span>
+        <span class="technology technology-secondary">ECLIPSE</span>
+        <span class="technology technology-small">GOOGLE CLOUD</span>
+        <span class="technology technology-small">JSON</span>
+
       </div>
     </section>
-
-    <footer>
-      VERÓNICA ACEVES GIL · CURRÍCULUM · 2026
-    </footer>
 
   </main>
+
 </div>
 
 </body>
