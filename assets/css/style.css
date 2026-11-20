@@ -577,3 +577,177 @@ body {
     gap: 15px;
   }
 }
+
+/* =================================
+   COLUMNA IZQUIERDA - NUEVA DISTRIBUCIÓN
+================================= */
+
+.sidebar {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  padding: 26px 22px;
+  gap: 17px;
+  justify-content: flex-start;
+}
+
+/* Fotografía */
+
+.photo-container {
+  width: min(205px, 90%);
+  aspect-ratio: 1;
+  padding: 0;
+  margin: 0 auto 5px;
+  border: 6px solid var(--pink-strong);
+  outline: 4px solid var(--white);
+  outline-offset: 2px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--pink-strong);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+  transform: scale(1.08);
+}
+
+/* Secciones */
+
+.sidebar-section {
+  padding-top: 13px;
+}
+
+.sidebar-section h2 {
+  font-size: 0.91rem;
+  margin-bottom: 11px;
+}
+
+.contact-section {
+  padding-top: 0;
+}
+
+/* Contacto compacto */
+
+.contact-list {
+  gap: 9px;
+}
+
+.contact-list li {
+  gap: 8px;
+}
+
+.contact-icon {
+  flex-basis: 27px;
+  width: 27px;
+  height: 27px;
+}
+
+.contact-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.contact-list a {
+  font-size: 0.70rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+/* Idiomas */
+
+.simple-list {
+  gap: 10px;
+}
+
+.simple-list li {
+  font-size: 0.75rem;
+  gap: 5px;
+}
+
+.language-level {
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+/* Dos columnas de competencias */
+
+.skills-section {
+  flex: 1;
+  min-height: 0;
+}
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.skills-column {
+  min-width: 0;
+}
+
+.skills-column h2 {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+/* Soft skills: círculos + texto accesible */
+
+.soft-skills-list,
+.abilities-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.soft-skills-list li,
+.abilities-list li {
+  position: relative;
+  padding-left: 13px;
+  font-size: 0.69rem;
+  line-height: 1.35;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.soft-skills-list li::before,
+.abilities-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pink-strong);
+}
+
+/* En escritorio, la barra no se desplaza */
+
+@media (min-width: 701px) {
+  .sidebar {
+    overflow: hidden;
+  }
+}
+
+/* Adaptación móvil */
+
+@media (max-width: 700px) {
+  .sidebar {
+    height: auto;
+    overflow: visible;
+    padding: 28px 24px;
+  }
+
+  .skills-section {
+    flex: initial;
+  }
+}
