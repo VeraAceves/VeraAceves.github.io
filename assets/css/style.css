@@ -1,9 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Roboto+Slab:wght@700;800;900&display=swap');
 
-/* =========================================
-   VARIABLES
-========================================= */
-
 :root {
   --pink: #fbd9e3;
   --pink-strong: #f20b58;
@@ -12,14 +8,9 @@
   --ink: #29394e;
   --white: #ffffff;
   --background: #f2f3f6;
-
   --font-body: 'DM Sans', sans-serif;
   --font-title: 'Roboto Slab', serif;
 }
-
-/* =========================================
-   RESET Y BASE
-========================================= */
 
 * {
   box-sizing: border-box;
@@ -33,46 +24,45 @@ html {
 
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--background);
   color: var(--ink);
   font-family: var(--font-body);
 }
 
-/* =========================================
-   DISTRIBUCIÓN GENERAL
-========================================= */
-
+/* Distribución general: proporciones fluidas y altura según contenido */
 .cv-layout {
   display: grid;
-  grid-template-columns: 31% 69%;
-  width: min(1450px, 96vw);
-  height: min(78vh, 850px);
-  min-height: 620px;
+  grid-template-columns: minmax(260px, 32%) minmax(0, 68%);
+  width: min(1500px, 94vw);
+  min-height: 90vh;
+  height: auto;
   margin: 4vh auto;
-  overflow: hidden;
+  overflow: visible;
   background: var(--white);
   box-shadow: 0 12px 40px rgba(41, 57, 78, 0.09);
 }
 
-/* =========================================
-   COLUMNA IZQUIERDA
-========================================= */
-
+/* Columna izquierda */
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 17px;
-  min-height: 0;
-  height: 100%;
-  overflow: hidden;
-  padding: 26px 22px;
+  gap: 29px;
+  min-width: 0;
+  min-height: 100%;
+  height: auto;
+  overflow: visible;
+  align-items: stretch;
+  padding: 34px clamp(18px, 2.2vw, 30px);
+  text-align: left;
   background: var(--pink);
   animation: slideInLeft 0.8s ease both;
 }
 
 .photo-container {
-  width: min(205px, 90%);
+  width: min(245px, 94%);
+  align-self: center;
   aspect-ratio: 1;
   flex-shrink: 0;
   margin: 0 auto 5px;
@@ -88,27 +78,30 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  transform: scale(1.18);
+  transform: scale(1.27);
   border-radius: 50%;
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 42% center;
 }
 
 .sidebar-section {
-  padding-top: 13px;
-  border-top: 1px solid rgba(41, 57, 78, 0.65);
+  width: min(100%, 310px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 7px;
+  border: 0;
 }
 
 .sidebar-section h2 {
-  margin-bottom: 11px;
-  color: var(--ink);
-  font-size: 0.91rem;
+  margin-bottom: 15px;
+  text-align: left;
+  color: var(--pink-strong);
+  font-size: 1.02rem;
   font-weight: 800;
 }
 
 .contact-section {
   padding-top: 0;
-  border-top: 0;
 }
 
 .contact-list,
@@ -119,17 +112,18 @@ body {
 }
 
 /* Contacto */
-
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  align-items: stretch;
+  gap: 13px;
 }
 
 .contact-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 10px;
   min-width: 0;
 }
 
@@ -152,9 +146,9 @@ body {
 
 .contact-list a {
   color: var(--ink);
-  font-size: 0.70rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.35;
   text-decoration: none;
   overflow-wrap: anywhere;
 }
@@ -164,45 +158,48 @@ body {
 }
 
 /* Idiomas */
-
 .simple-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: stretch;
+  gap: 13px;
 }
 
 .simple-list li {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 5px;
-  font-size: 0.75rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px 9px;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
 .language-level {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
+  text-align: left;
+  white-space: normal;
 }
 
 /* Habilidades personales */
-
 .skills-section {
-  flex: 1;
   min-height: 0;
 }
 
 .skills-section > h2 {
-  margin-bottom: 17px;
-  font-size: 0.95rem;
+  margin-bottom: 19px;
+  text-align: left;
+  font-size: 1.02rem;
 }
 
 .skills-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: 22px;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
 }
 
 .skills-column {
@@ -210,7 +207,7 @@ body {
 }
 
 .skills-column h3 {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   color: var(--blue);
   font-size: 0.76rem;
   font-weight: 800;
@@ -220,49 +217,46 @@ body {
 .abilities-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: flex-start;
+  gap: 13px;
 }
 
 .soft-skills-list li,
 .abilities-list li {
   position: relative;
-  padding-left: 13px;
-  font-size: 0.72rem;
+  padding-left: 0;
+  font-size: 0.84rem;
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.5;
+  text-align: left;
   overflow-wrap: anywhere;
 }
 
 .soft-skills-list li::before,
 .abilities-list li::before {
-  position: absolute;
-  top: 5px;
-  left: 0;
+  position: static;
+  display: inline-block;
   width: 6px;
   height: 6px;
+  margin: 0 6px 2px 0;
   border-radius: 50%;
   background: var(--pink-strong);
   content: "";
 }
 
-/* =========================================
-   COLUMNA DERECHA
-========================================= */
-
+/* Columna derecha */
 .main-content {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: block;
   min-width: 0;
-  min-height: 0;
-  height: 100%;
-  overflow: hidden;
-  padding: 30px 42px 0;
+  min-height: 90vh;
+  height: auto;
+  overflow: visible;
+  padding: 38px clamp(26px, 3.5vw, 54px) 50px;
   background: var(--white);
 }
 
-/* Formas geométricas decorativas */
-
+/* Elementos decorativos: se dejan sobresalir para que el círculo no se recorte */
 .main-content::before,
 .main-content::after {
   position: absolute;
@@ -291,17 +285,15 @@ body {
           radial-gradient(circle at 45% 100%, var(--pink-medium) 0 28px, transparent 29px);
 }
 
-/* Cabecera fija dentro de la columna */
-
+/* Cabecera */
 .intro-section {
   position: relative;
   z-index: 2;
-  flex-shrink: 0;
   max-width: 900px;
-  margin: 0;
-  padding: 0 0 25px;
-  border-bottom: 2px solid var(--ink);
-  background: var(--white);
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  border: 0;
+  background: transparent;
   animation: fadeUp 0.8s 0.15s ease both;
 }
 
@@ -311,7 +303,7 @@ body {
   gap: 9px;
   margin-bottom: 16px;
   color: var(--ink);
-  font-size: 0.72rem;
+  font-size: 0.73rem;
   font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
@@ -331,90 +323,83 @@ body {
   margin-bottom: 12px;
   color: var(--ink);
   font-family: var(--font-title);
-  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-size: clamp(2.5rem, 4.8vw, 4.5rem);
   font-weight: 900;
-  line-height: 0.98;
+  line-height: 1.02;
   letter-spacing: -2px;
 }
 
 .degree-title {
   max-width: 760px;
-  margin: 0 0 12px;
+  margin: 0 0 13px;
   color: var(--blue);
   font-size: 1.05rem;
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .profile-text {
   max-width: 760px;
-  font-size: 0.87rem;
+  font-size: 0.88rem;
   font-weight: 500;
   line-height: 1.65;
 }
 
-/* Área desplazable */
-
-.main-scroll {
+/* Contenedor de formación, experiencia y tecnologías */
+.main {
   position: relative;
   z-index: 1;
-  flex: 1;
-  min-height: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding: 5px 12px 35px 0;
-  scrollbar-color: var(--blue) transparent;
-  scrollbar-width: thin;
+  min-width: 0;
+  padding: 0 0 20px;
 }
 
-/* =========================================
-   SECCIONES DE CONTENIDO
-========================================= */
-
-.content-section {
-  position: relative;
-  margin-top: 22px;
-  padding-top: 20px;
+.main > section {
+  margin-top: 14px;
+  padding-top: 0;
+  border: 0;
   animation: fadeUp 0.8s ease both;
 }
 
-.education-section {
+.main > section:first-child {
+  margin-top: 0;
+}
+
+.formacion {
   animation-delay: 0.3s;
 }
 
-.experience-section {
+.experiencia {
   animation-delay: 0.45s;
 }
 
-.technology-section {
+.tecnologias {
   animation-delay: 0.6s;
 }
 
-.content-section > h2 {
-  margin-bottom: 19px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(41, 57, 78, 0.2);
+.main > section > h2 {
+  margin-bottom: 13px;
+  padding: 0;
+  border: 0;
   color: var(--ink);
   font-size: 1.2rem;
   font-weight: 800;
 }
 
-/* Formación en dos columnas */
-
+/* Formación */
 .education-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 35px;
+  gap: clamp(22px, 2.8vw, 42px);
 }
 
 .education-group {
   min-width: 0;
-  margin-bottom: 23px;
+  margin-bottom: 8px;
 }
 
-.education-group h3 {
-  min-height: 38px;
+.education-group > h3 {
+  display: none;
   margin-bottom: 13px;
   color: var(--pink-strong);
   font-size: 0.84rem;
@@ -425,60 +410,122 @@ body {
 }
 
 .cv-entry {
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 }
 
 .cv-entry h3,
 .cv-entry h4 {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   color: var(--ink);
-  font-size: 0.91rem;
+  font-size: 0.98rem;
   font-weight: 800;
-  line-height: 1.45;
+  line-height: 1.48;
 }
 
 .education-group .cv-entry h4 {
-  font-size: 0.86rem;
+  font-size: 0.87rem;
 }
 
-.institution {
-  margin-bottom: 5px;
-  color: #718096;
-  font-size: 0.76rem;
-  font-weight: 600;
-  line-height: 1.4;
+/* Instituciones y centros en el mismo azul que el subtítulo */
+.centro {
+  margin-bottom: 7px;
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
-.education-group .institution {
-  font-size: 0.74rem;
+.education-group .centro {
+  font-size: 0.75rem;
 }
 
 /* Experiencia profesional */
-
-.experience-section .cv-entry {
-  margin-bottom: 19px;
+.experiencia .cv-entry {
+  margin-bottom: 14px;
 }
 
 .experience-description {
-  display: -webkit-box;
-  max-width: 650px;
-  overflow: hidden;
+  max-width: 680px;
   color: var(--ink);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
-/* =========================================
-   NUBE DE TECNOLOGÍAS
-========================================= */
+/* Nube de tecnologías */
+/* Nube de lenguajes y tecnologías */
+
+.sidebar .tecnologias {
+  width: min(100%, 310px);
+  margin: 0 auto;
+}
+
+.sidebar .tecnologias > h2 {
+  margin-bottom: 18px;
+  color: var(--pink-strong);
+  font-size: 1.02rem;
+  text-align: left;
+}
 
 .technology-cloud {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 15px 0 40px;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 5px 0 15px;
+}
+
+.technology-level {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 5px 13px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.technology-level span {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Nivel 1 */
+.level-xl span {
+  color: var(--blue);
+  font-size: 2.15rem;
+  font-weight: 900;
+}
+
+/* Nivel 2 */
+.level-lg span {
+  color: var(--pink-strong);
+  font-size: 1.15rem;
+}
+
+/* Nivel 3 */
+.level-md span {
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+/* Nivel 4 */
+.level-sm span {
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+  .sidebar .tecnologias {
+    width: min(100%, 310px);
+  }
+
+  .level-xl span {
+    font-size: 2rem;
+  }
 }
 
 .technology-main {
@@ -486,7 +533,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0 25px;
+  gap: 12px 32px;
   line-height: 1;
 }
 
@@ -503,17 +550,17 @@ body {
 
 .technology.java {
   color: var(--blue);
-  font-size: clamp(4.5rem, 9vw, 8rem);
+  font-size: clamp(4.2rem, 8.8vw, 8rem);
 }
 
 .technology.sql {
   color: var(--pink-strong);
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(3.6rem, 7vw, 6.3rem);
 }
 
 .technology.eclipse {
   color: var(--pink-medium);
-  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.9rem);
 }
 
 .technology-secondary-list {
@@ -521,32 +568,78 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 10px 22px;
+  gap: 16px 27px;
   max-width: 750px;
   margin: 0 auto;
 }
 
 .technology-secondary-list span {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
   color: var(--ink);
   font-family: var(--font-title);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 700;
 }
 
-/* =========================================
-   ANIMACIONES Y ACCESIBILIDAD
-========================================= */
 
+/* Jerarquía visual de las secciones principales */
+.formacion > h2,
+.experiencia > h2 {
+  color: var(--pink-strong) !important;
+}
+
+/* Tecnologías en la columna rosa */
+.sidebar .tecnologias {
+  width: min(100%, 310px);
+  margin: 0 auto;
+  padding-top: 8px;
+}
+
+.sidebar .tecnologias > h2 {
+  margin-bottom: 15px;
+  color: var(--pink-strong);
+  font-size: 1.02rem;
+  text-align: left;
+}
+
+.sidebar .technology-cloud {
+  align-items: flex-start;
+  gap: 16px;
+  padding: 4px 0 12px;
+}
+
+.sidebar .technology-main {
+  justify-content: flex-start;
+  gap: 8px 14px;
+}
+
+.sidebar .technology.java {
+  font-size: clamp(2.8rem, 4vw, 4rem);
+}
+
+.sidebar .technology.sql {
+  font-size: clamp(2.4rem, 3.5vw, 3.4rem);
+}
+
+.sidebar .technology.eclipse {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+}
+
+.sidebar .technology-secondary-list {
+  justify-content: flex-start;
+  gap: 9px 15px;
+  margin: 0;
+}
+
+.sidebar .technology-secondary-list span {
+  font-size: 0.88rem;
+}
+
+/* Animaciones y accesibilidad */
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(18px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -558,7 +651,6 @@ body {
     opacity: 0;
     transform: translateX(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -576,49 +668,39 @@ body {
   }
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
+/* Tablet */
 @media (max-width: 1000px) and (min-width: 701px) {
   .cv-layout {
     width: 96vw;
-    grid-template-columns: 34% 66%;
+    grid-template-columns: minmax(245px, 34%) minmax(0, 66%);
   }
 
   .sidebar {
-    padding: 24px 18px;
+    padding: 25px 18px;
   }
 
   .main-content {
-    padding-right: 28px;
-    padding-left: 28px;
+    padding-right: 27px;
+    padding-left: 27px;
   }
 
   .education-columns {
-    gap: 22px;
+    gap: 18px;
   }
 
   .skills-columns {
-    gap: 15px;
+    gap: 13px;
   }
 }
 
-/* =========================================
-   MÓVIL
-========================================= */
-
+/* Móvil */
 @media (max-width: 700px) {
-  body {
-    overflow: auto;
-  }
-
   .cv-layout {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     height: auto;
-    min-height: 0;
     margin: 0 auto;
     overflow: visible;
   }
@@ -626,12 +708,20 @@ body {
   .sidebar {
     height: auto;
     overflow: visible;
-    padding: 28px 24px;
-    gap: 22px;
+    align-items: stretch;
+    padding: 30px 24px;
+    gap: 25px;
+  }
+
+  .sidebar-section,
+  .sidebar .tecnologias {
+    width: min(100%, 310px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .photo-container {
-    width: 190px;
+    width: 220px;
   }
 
   .skills-section {
@@ -644,34 +734,40 @@ body {
 
   .main-content {
     display: block;
+    min-height: auto;
     height: auto;
     overflow: visible;
-    padding: 35px 25px;
+    padding: 34px 24px 45px;
   }
 
   .intro-section {
     position: relative;
+    margin-bottom: 24px;
   }
 
   .intro-section h1 {
-    font-size: 3rem;
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
   }
 
   .profile-text {
     font-size: 0.88rem;
   }
 
-  .main-scroll {
-    overflow: visible;
-    padding: 0;
-  }
-
   .education-columns {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 14px;
   }
 
   .technology.java {
     font-size: 4rem;
+  }
+
+  .technology.sql {
+    font-size: 3.4rem;
+  }
+
+  .main-content::before {
+    width: 130px;
+    height: 120px;
   }
 }
